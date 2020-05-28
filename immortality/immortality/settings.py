@@ -84,13 +84,34 @@ WSGI_APPLICATION = 'immortality.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+# DEFAULT SQLITE CONFIG
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': basesecrets.POSTGRES_DB_NAME,
+        'USER': basesecrets.POSTGRES_USER,
+        'PASSWORD': basesecrets.POSTGRES_USER_PASSWORD,
+        'HOST': basesecrets.POSTGRES_IP,
+        'PORT': basesecrets.POSTGRES_PORT,
     }
 }
-
+# https://cloud.google.com/sql/docs/postgres/quickstart
+# GCP COPY PASTA BELOW:
+# In the flexible environment, you connect to CloudSQL using a unix socket.
+# Locally, you can use the CloudSQL proxy to proxy a localhost connection
+# to the instance
+# DATABASES['default']['HOST'] = '/cloudsql/<your-cloudsql-connection-string>'
+# if os.getenv('GAE_INSTANCE'):
+#     pass
+# else:
+#     DATABASES['default']['HOST'] = '127.0.0.1'
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators

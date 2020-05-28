@@ -18,7 +18,7 @@ class Person(models.Model):
     # BIRTH
     date_of_birth = models.DateTimeField(blank=True, null=True)
     city_of_birth = models.CharField(max_length=100, blank=True)
-    country_of_birth = models.CharField(max_length=100, blank=True)
+    # country_of_birth = models.CharField(max_length=100, blank=True)
 
     # NATIONALITY
     # primary_nationality = models.CharField(max_length=100, blank=True)

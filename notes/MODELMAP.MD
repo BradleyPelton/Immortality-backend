@@ -13,7 +13,7 @@ ImmortalityUser   ((Houses login and AUTH logic))
 
 
 
-Person     ((the representation of a person, This is what is publicly available in a ledger))
+Person((the representation of a person, This is what is publicly available in a ledger))
 
 Location
 
