@@ -12,7 +12,7 @@ sudo -i passwd
 ### INSTALLING POSTGRES
 # Create the file /etc/apt/sources.list.d/pgdg.list
 # ADD THE FOLLOWING LINE TO PGDG.LIST : 
-deb http://apt.postgresql.org/pub/repos/apt/ bionic-pgdg main
+cat 'deb http://apt.postgresql.org/pub/repos/apt/ bionic-pgdg main' >> pgdg.list
 
 # import repository signing key
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
