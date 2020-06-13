@@ -16,7 +16,10 @@ class ImmortalityUser(AbstractBaseUser, PermissionsMixin):
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
 
-    objects = ImmortalityUserManager()  # TODO- Not sure what this is doing
+    # TODO
+    # profile_pictire = models.ImageField()
+
+    objects = ImmortalityUserManager()
 
     def __str__(self):
         return self.email

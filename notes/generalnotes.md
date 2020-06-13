@@ -13,3 +13,13 @@ https://stackoverflow.com/questions/36153748/django-makemigrations-no-changes-de
 
 Entity Relationship Diagram (ERD)
 https://www.visual-paradigm.com/guide/data-modeling/what-is-entity-relationship-diagram/
+
+
+
+
+
+
+### General notes
+- Apparently you arent suposed to make the "inevitability" directory a python module. (i.e. DONT INCLUDE
+A __init__ file in this directory). Doing so causes a lot of problems with manage.py test. See
+https://stackoverflow.com/questions/21069880/running-django-tutorial-tests-fail-no-module-named-polls-tests
